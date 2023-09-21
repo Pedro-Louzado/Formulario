@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    <h1>formulario</h1> 
+        <form name="submit-to-google-sheet2">    
+            <h2>Herói preferido de Ben 10</h2>
+           
+            <input name="Herói" type="radio" value="sim" >
+            <label name="Herói" for="Herói">Gigante</label>
+            <input name="Herói" type="radio" value="sim" >
+            <label name="Herói" for="Herói">Enormossar</label>
+            <input name="Herói" type="radio" value="sim" >
+            <label name="Herói" for="Herói">Diamante</label>
+            <input name="Herói" type="radio" value="sim" >
+            <label name="Herói" for="Herói">Fogo Fátuo</label>
+         
+            
+            
+            <h2>Anime preferido</h2>
+
+             <input name="anime" type="radio" value="sim" >
+            <label name="anime" for="anime">One Piece</label>
+            <input name="anime" type="radio" value="sim" >
+            <label name="anime" for="anime">One Puch Man</label>
+            <input name="anime" type="radio" value="sim" >
+            <label name="anime" for="anime">Naruto</label>
+            <input name="anime" type="radio" value="sim" >
+            <label name="anime" for="anime">Attack on Titan</label>
+            
+            <h2>Animação Dream Works</h2>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">kung fu Panda</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Como Treinar Seu Dragão</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Madagascar</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Shrek</label>
+            
+            
+            <h2>Animação Dream Disney</h2>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Toy Story</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Up: Altas Aventuras</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Procurando Nemo</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">O Rei Leão</label>
+            
+            
+             
+            <h2></h2>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Toy Story</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Up: Altas Aventuras</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">Procurando Nemo</label>
+            <input name="foi_estadio" type="radio" value="sim" >
+            <label name="foi_estadio" for="foi_estadio">O Rei Leão</label>
+            
+            
+            
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwtRc8TcYtTXrJdyEKy_EDNb8vetIP_CONKL4sr-yD0jMkw2x0NIkACYlgtbLuW0cY5/exec'
+                const form = document.forms['submit-to-google-sheet1']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+                  form.reset();
+                })
+              </script>
+                
+
+</body>
+</html>
